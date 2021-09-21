@@ -1,0 +1,104 @@
+name: praime_home
+description: A new Flutter Application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: 7.1.0
+  carousel_slider: ^4.0.0
+  flutter_conditional_rendering: ^2.0.0
+  cupertino_icons: ^1.0.3
+  dio: ^4.0.0
+  flutter_bloc: ^7.2.0
+  #flutter_lints: ^1.0.4
+  fluttertoast: ^8.0.8
+  hexcolor: ^2.0.5
+  intl: 0.17.0
+  shared_preferences: ^2.0.8
+  smooth_page_indicator: ^1.0.0+2
+  sqflite: ^2.0.0+4
+  webview_flutter: ^2.0.14
+  flutter_rating_bar: ^4.0.0
+  flutter_glow: ^0.2.0
+  line_icons: ^2.0.1
+  sizer: ^2.0.15
+  google_fonts: ^2.1.0
+  concentric_transition: ^1.0.1+1
+  auto_route: ^2.4.0
+  build_runner: ^2.1.2
+  auto_route_generator: ^2.4.0
+  syncfusion_flutter_datepicker: ^19.2.62
+  flutter_launcher_icons: 0.9.2
+  provider: ^6.0.0
+  rxdart: ^0.27.2
+ 
+  font_awesome_flutter: ^9.1.0
+  geolocator: ^7.6.2
+  google_maps_flutter: ^2.0.10
+  material_floating_search_bar: ^0.3.4
+  pin_code_fields: ^7.3.0
+  url_launcher: ^6.0.11
+
+
+  # firebase_auth: ^3.1.1
+  # firebase_auth_web: ^1.0.0
+  # image_picker: ^0.8.4+2
+  # firebase_core: ^1.6.0
+  # cloud_firestore: ^2.5.3
+  # firebase_storage: ^10.0.3
+  # google_sign_in: ^5.1.0
+  # flutter_facebook_login: ^3.0.0
+  
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/Cairo-Black.ttf
+    - assets/fonts/Cairo-Bold.ttf
+    - assets/fonts/Cairo-ExtraLight.ttf
+    - assets/fonts/Cairo-Light.ttf
+    - assets/fonts/Cairo-Regular.ttf
+    - assets/fonts/Cairo-SemiBold.ttf
+    - assets/images/air-conditioner.png
+    - assets/images/back.png
+    - assets/images/building.png
+    - assets/images/conversation.png
+    - assets/images/drawer.png
+    - assets/images/eco-house.png
+    - assets/images/filter.png
+    - assets/images/forward.png
+    - assets/images/home.png
+    - assets/images/login.png
+    - assets/images/luffy.jpg
+    - assets/images/maintenance.png
+    - assets/images/notification.png
+    - assets/images/onboard_1.png
+    - assets/images/onboard_2.png
+    - assets/images/onboard_3.png
+    - assets/images/pexels-henry.png
+    - assets/images/pexels-marina.png
+    - assets/images/pic1.png
+    - assets/images/pic2.png
+    - assets/images/pic3.png
+    - assets/images/pic4.png
+    - assets/images/pic5.png
+    - assets/images/pic6.png
+    - assets/images/pic7.png
+    - assets/images/pic8.png
+    - assets/images/plumber.png
+    - assets/images/renovation.png
+    - assets/images/roof.png
+  fonts:
+    - family: Cairo-Bold
+      fonts:
+        - asset: assets/fonts/Cairo-Bold.ttf
+          weight: 700
