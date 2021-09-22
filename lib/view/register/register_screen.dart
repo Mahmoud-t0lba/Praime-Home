@@ -96,7 +96,7 @@ class RegisterScreen extends StatelessWidget {
                 TextFormField(
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter your E-mail';
+                      return 'Please enter your name';
                     }
                     return null;
                   },

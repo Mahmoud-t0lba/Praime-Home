@@ -58,92 +58,95 @@ class _ServiceReservationScreenState extends State<ServiceReservationScreen> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.only(left: 30, right: 30, top: 30),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              SizedBox(height: 30),
-              Text(
-                'حجز طلب معاينه',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
+          child: SingleChildScrollView(
+            physics: NeverScrollableScrollPhysics(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                SizedBox(height: 30),
+                Text(
+                  'حجز طلب معاينه',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
                 ),
-              ),
-              Text(
-                'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة لقد تم توليد هذا النص من',
-                maxLines: 2,
-                overflow: TextOverflow.clip,
-                textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                  color: Colors.grey,
+                Text(
+                  'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة لقد تم توليد هذا النص من',
+                  maxLines: 2,
+                  overflow: TextOverflow.clip,
+                  textDirection: TextDirection.rtl,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    color: Colors.grey,
+                  ),
                 ),
-              ),
-              SizedBox(height: 30),
-              CustomTextFormField(
-                hint: 'الاسم بالكامل',
-              ),
-              SizedBox(height: 30),
-              CustomTextFormField(
-                hint: 'العنوان',
-              ),
-              SizedBox(height: 30),
-              CustomTextFormField(
-                hint: 'رقم الهاتف',
-              ),
-              SizedBox(height: 30),
-              Text(
-                'ميعاد المعاينه',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
+                SizedBox(height: 30),
+                CustomTextFormField(
+                  hint: 'الاسم بالكامل',
                 ),
-              ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  CheckboxRow(),
-                  CheckboxRow(),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  CheckboxRow(),
-                  CheckboxRow(),
-                ],
-              ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  InkWell(
-                    onTap: () => navigateAndFinish(
-                      context,
-                      FainalScreen(),
-                    ),
-                    child: Container(
-                      width: 152,
-                      height: 38,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(10),
+                SizedBox(height: 30),
+                CustomTextFormField(
+                  hint: 'العنوان',
+                ),
+                SizedBox(height: 30),
+                CustomTextFormField(
+                  hint: 'رقم الهاتف',
+                ),
+                SizedBox(height: 30),
+                Text(
+                  'ميعاد المعاينه',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                ),
+                SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    CheckboxRow(),
+                    CheckboxRow(),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    CheckboxRow(),
+                    CheckboxRow(),
+                  ],
+                ),
+                SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      onTap: () => navigateAndFinish(
+                        context,
+                        FainalScreen(),
                       ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        'حجز طلب معاينه',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
+                      child: Container(
+                        width: 152,
+                        height: 38,
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'حجز طلب معاينه',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
