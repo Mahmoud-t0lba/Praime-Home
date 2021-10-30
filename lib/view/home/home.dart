@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '../../controller/components/components.dart';
@@ -60,7 +61,15 @@ class HomeScreen extends StatelessWidget {
                     width: 40,
                     height: 40,
                   ),
-                  onPressed: () {},
+
+                  
+                  // TODO-lang
+                  onPressed: () {
+                    if (context.locale.languageCode == "en")
+                      context.setLocale(Locale("ar", "EG"));
+                    else
+                      context.setLocale(Locale("en", "US"));
+                  },
                 ),
                 hintText: 'ابحث عن خدمه محدده',
                 hintStyle: TextStyle(fontSize: 16),
@@ -85,8 +94,9 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
+            // TODO-lang
             Text(
-              'خدماتنا',
+              tr("ourServices"),
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 25,

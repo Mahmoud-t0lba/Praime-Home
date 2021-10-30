@@ -8,10 +8,11 @@ import 'view/on_boarding/on_boarding_screen.dart';
 import 'controller/bloc_observer.dart';
 import 'controller/network/local/cache_helper.dart';
 import 'controller/network/remote/dio_helper.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await EasyLocalization.ensureInitialized();
   Bloc.observer = MyBlocObserver();
   DioHelper.init();
   await CacheHelper.init();
@@ -21,7 +22,6 @@ void main() async {
   bool? onBoarding = CacheHelper.getData(key: 'onBoarding');
   token = CacheHelper.getData(key: 'token');
 
-  // ignore: unnecessary_null_comparison
   if (onBoarding != null) {
     // ignore: unnecessary_null_comparison
     if (token != null) {
@@ -34,8 +34,16 @@ void main() async {
   }
 
   runApp(
-    MyApp(
-      startWidget: widget,
+    EasyLocalization(
+      supportedLocales: [
+        Locale('ar', 'EG'),
+        Locale('en', 'US'),
+      ],
+      path: 'assets',
+      fallbackLocale: Locale('en', 'US'),
+      child: MyApp(
+        startWidget: widget,
+      ),
     ),
   );
 }
@@ -45,9 +53,8 @@ class MyApp extends StatelessWidget {
   Widget? startWidget;
 
   MyApp({
-    Key? key,
     this.startWidget,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +63,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Jannah',
       ),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       home: startWidget,
     );
   }
